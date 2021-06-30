@@ -21,8 +21,8 @@
 				$calorias[]=$listado['calorias'];
 	
 			}
-			print_r($peso);
-			print_r($calorias);
+			//print_r($peso);
+			//print_r($calorias);
 
 
 		
@@ -36,19 +36,16 @@
 var pesoMaximo=<?php echo json_encode($pesomax);?>;;
 var pesos=<?php echo json_encode($peso);?>;
 var valores=<?php echo json_encode($calorias);?>;
-//document.write("HOLA MUNDOOOOOOOOO  nose  "+"<br>");
+
 //document.write(valores+"<br>");
 //document.write(pesos+"<br>");
-
-
- function llenarMochila(pesoMaximo, pesos, valores){
-	//document.write("HOLA MUNDOOOOOOOOO  nose  "+"<br>");
+function llenarMochila(pesoMaximo, pesos, valores){
+	
     let values = [];
-	//document.write("HOLA MUNDOOOOOOOOO check "+"<br>");
-    //TABLA DE RESULTADOS INTERMEDIOS: Valores máximos
+	
     var numIter=0;
     values = pesos.map(v => Array.from({length:  pesoMaximo+1}, () => 0));
-	//document.write("HOLA MUNDOOOOOOOOO  nose  "+"<br>");
+	
     for (let i=1; i<pesos.length; i++) {
         numIter++;
         for (let j=1; j<=pesoMaximo; j++){
@@ -73,14 +70,36 @@ var valores=<?php echo json_encode($calorias);?>;
             j -= pesos[i];
         }
     }
-
-	document.write(objetos+"final");
-
 	
+
+	//document.write(objetos+"final");
+	document.write("LOS ELEMENTOS QUE SE PUEDEN LLEVAR SON: "+"<br>");
 	
+	for (var x = 0; x < objetos.length; x++) {
+		
+		if(objetos[x]==0){
+			document.write("Elemento1  Peso=5  Calorias=3"+"<br>"+"<br>");
+		}else{
+			if(objetos[x]==1){
+				document.write("Elemento2  Peso=3  Calorias=5"+"<br>");
+			}else{
+				if(objetos[x]==2){
+					document.write("Elemento3  Peso=5  Calorias=2"+"<br>");
+				}else{
+					if(objetos[x]==3){
+						document.write("Elemento4  Peso=1  Calorias=8"+"<br>");
+					}else{
+						document.write("Elemento5  Peso=2  Calorias=3"+"<br>");
+					}
+				}
+			}
+		}
+		
+	}
+
     //return objetos;
 }
-//document.write("HOLA MUNDOOOOOOOOO");
+
 llenarMochila(pesoMaximo,pesos,valores);
 </script>
 	

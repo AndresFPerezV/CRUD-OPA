@@ -62,7 +62,7 @@ crossorigin="anonymous"></script>
 		<li class="nav-item dropdown">
 			<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  CONSULTAS  </a>
 		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="controller/ctrConsultasProveedor.php?consulta1=listado1">Listado de Elementos</a></li>
+			  <li><a class="dropdown-item" href="controller/ctrConsultasElemento.php?consulta1=listado1">Listado de Elementos</a></li>
 			  <li><a class="dropdown-item" href="#"> Opción2 </a></li>
 			  <li><a class="dropdown-item" href="#"> Opción3 </a></li>
 		    </ul>

@@ -96,7 +96,7 @@
 		}
 
 		public function listarElementos(){
-			$sql="select * from elementos";
+			$sql="select * from elemento";
 			$query=$this->conexionDB->connect()->prepare($sql);
 			$query->execute();
 			$result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -106,7 +106,7 @@
 	
 	}
 
-	
+
 	
 	
 ?>

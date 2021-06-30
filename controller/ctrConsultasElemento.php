@@ -6,7 +6,7 @@
 	//echo ($consulta1);
 	//print_r($_GET);
 
-	$modelo=new Proveedor(NULL,NULL,NULL,NULL);
+	$modelo=new Elemento(NULL,NULL,NULL,NULL);
 
 	if($consulta1=='listado1')
 	{

@@ -59,7 +59,7 @@ function llenarMochila(pesoMaximo, pesos, valores){
             }
         }
     }
-    //BUCLE VORAZ
+    
     let objetos = [];
     let j = pesoMaximo;
     for (let i=pesos.length-1; i>0; i--){

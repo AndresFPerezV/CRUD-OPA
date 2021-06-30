@@ -7,7 +7,14 @@
 	</head>
 	<body>
 	
-<?php 
+<?php
+			$maxpeso = isset($_POST['maxpeso']) ? $_POST['maxpeso']: NULL;
+
+			if(isset($_POST['frmRegistrar']))
+			{
+			$pesomax=$maxpeso;
+			}
+
 			
 			foreach($datos as $listado){
 				$peso[]=$listado['peso'];
@@ -16,6 +23,8 @@
 			}
 			print_r($peso);
 			print_r($calorias);
+
+
 		
 	
 ?>
@@ -24,7 +33,7 @@
 
 <script type="text/javascript" languaje="javascript">
 
-var pesoMaximo=10;
+var pesoMaximo=<?php echo json_encode($pesomax);?>;;
 var pesos=<?php echo json_encode($peso);?>;
 var valores=<?php echo json_encode($calorias);?>;
 //document.write("HOLA MUNDOOOOOOOOO  nose  "+"<br>");
@@ -66,6 +75,8 @@ var valores=<?php echo json_encode($calorias);?>;
     }
 
 	document.write(objetos+"final");
+
+	
 	
     //return objetos;
 }

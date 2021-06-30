@@ -3,35 +3,35 @@
 	//cear en en la carpeta modelo el archivo proveedor.php
 	require('../db/Conectar.php');
 	
-	class Proveedor{
-		private $idProveedor;
+	class Elemento{
+		private $CodigoE;
 		private $nombre;
-		private $telefono;
-		private $direccion;
+		private $peso;
+		private $calorias;
 		private $conexionDB;
 		
-		public function __construct($id, $nom, $tel, $dir){
+		public function __construct($id, $nom, $pes, $cal){
 			$this->conexionDB = new Conectar();
-			$this->idProveedor = $id;
+			$this->CodigoE = $id;
 			$this->nombre = $nom;
-			$this->telefono = $tel;
-			$this->direccion = $dir;
+			$this->peso = $pes;
+			$this->calorias = $cal;
 		}
 		
 		public function __destruct(){
 			$this->conexionDB = NULL;
 		}
 		
-		public function registrarProveedor(){
+		public function registrarElemento(){
 			try{
-				$sql = "INSERT INTO proveedor (idProveedor,nombre,telefono,direccion) VALUES (?,?,?,?)";
+				$sql = "INSERT INTO elemento (CodigoE,nombre,peso,calorias) VALUES (?,?,?,?)";
 				
 				$stmt = $this->conexionDB->connect()->prepare($sql);
 				
-				$stmt->bindParam(1, $this->idProveedor);
+				$stmt->bindParam(1, $this->CodigoE);
 				$stmt->bindParam(2, $this->nombre);
-				$stmt->bindParam(3, $this->telefono);
-				$stmt->bindParam(4, $this->direccion);
+				$stmt->bindParam(3, $this->peso);
+				$stmt->bindParam(4, $this->calorias);
 				
 				//Ejecutar la sentencia
 				$stmt->execute();
@@ -53,39 +53,39 @@
 		}
 		
 		
-		public function buscarProveedor($id){
-			$sql = "select * from proveedor where idProveedor = $id";
+		public function buscarElemento($id){
+			$sql = "select * from elemento where CodigoE = $id";
 			$query = $this->conexionDB->connect()->prepare($sql);
 			$query->execute();
 			$result = $query->fetchAll(PDO::FETCH_ASSOC);
 			return $result;
 		}
 
-		public function borrarProveedor(){
-			$sql = "DELETE from proveedor WHERE idProveedor = $this->idProveedor";
+		public function borrarElemento(){
+			$sql = "DELETE from elemento WHERE CodigoE = $this->CodigoE";
 			$query = $this->conexionDB->connect()->prepare($sql);
 			$query->execute();
 			return $query;
 		}
 
-		public function actualizarProveedor(){
+		public function actualizarElemento(){
 			try
 			{
-			$sql = "UPDATE proveedor SET
+			$sql = "UPDATE CodigoE SET
 			nombre = ?,
-			telefono = ?,
-			direccion = ?
-			WHERE idProveedor = $this->idProveedor";
+			peso = ?,
+			calorias = ?
+			WHERE CodigoE = $this->CodigoE";
 			$query = $this->conexionDB->connect()->prepare($sql);
 			$query->execute(array(
 			$this->nombre,
-			$this->telefono,
-			$this->direccion
+			$this->peso,
+			$this->calorias
 			));
 			?>
 			<script>
 			alert('Registro actualizado');
-			location.href="../views/frmRegistroProveedores.php";
+			location.href="../views/frmRegistroElementos.php";
 			</script>
 			<?php
 			}
@@ -95,8 +95,8 @@
 			}
 		}
 
-		public function listarProveedores(){
-			$sql="select * from proveedor";
+		public function listarElementos(){
+			$sql="select * from elementos";
 			$query=$this->conexionDB->connect()->prepare($sql);
 			$query->execute();
 			$result = $query->fetchAll(PDO::FETCH_ASSOC);

@@ -5,51 +5,51 @@
 	//echo "Este es el controlador de proveedor";
 	require('../modelo/elementos.php');
 	
-	$idProveedor = isset($_POST['idProveedor']) ? $_POST['idProveedor']: NULL;
+	$CodigoE = isset($_POST['CodigoE']) ? $_POST['CodigoE']: NULL;
 	$nombre = isset($_POST['nombre']) ? $_POST['nombre']: NULL;
-	$telefono = isset($_POST['telefono']) ? $_POST['telefono']: NULL;
-	$direccion = isset($_POST['direccion']) ? $_POST['direccion']: NULL;
+	$peso = isset($_POST['peso']) ? $_POST['peso']: NULL;
+	$calorias = isset($_POST['calorias']) ? $_POST['calorias']: NULL;
 	
 	
 	if(isset($_POST['frmRegistrar']))
 	{
-		$modelo = new Proveedor($idProveedor,$nombre,$telefono,$direccion);
-		$modelo->registrarProveedor();
+		$modelo = new Elemento($CodigoE,$nombre,$peso,$calorias);
+		$modelo->registrarElemento();
 		
 	}
-	else if(isset($_POST['frmBuscar']))
+	else if(isset($_POST['CodigoE']))
 	{
-		if(empty($idProveedor))
+		if(empty($CodigoE))
 		{
 			?>
 			<script>
-				alert('Debe ingresar el id del proveedor');
-				location.href="../views/frmRegistroProveedores.php";
+				alert('Debe ingresar el codigo del Elemento');
+				location.href="../views/frmRegistroElementos.php";
 			</script>
 			<?php
 		}
 		else
 		{
-			$modelo = new Proveedor(NULL,NULL,NULL,NULL);
-			$datos = $modelo->buscarProveedor($idProveedor);
+			$modelo = new Elemento(NULL,NULL,NULL,NULL);
+			$datos = $modelo->buscarElemento($CodigoE);
 			//print_r($datos);
-			require_once('../views/frmActualizarProveedores.php');
+			require_once('../views/frmActualizarElementos.php');
 		}
 	}else if(isset($_POST['frmActualizar']))
 	{
-	$modelo = new Proveedor($idProveedor,$nombre,$telefono,$direccion);
-	$modelo->actualizarProveedor();
+	$modelo = new Elemento($CodigoE,$nombre,$peso,$calorias);
+	$modelo->actualizarElemento();
 	}
 	else if(isset($_POST['frmBorrar']))
 	{
-	$modelo = new Proveedor($idProveedor,NULL,NULL,NULL);
-	$res = $modelo->borrarProveedor();
+	$modelo = new Elemento($CodigoE,NULL,NULL,NULL);
+	$res = $modelo->borrarElemento();
 	if($res)
 	{
 	?>
 	<script>
 	alert('Registro borrado');
-	location.href="../views/frmRegistroProveedores.php";
+	location.href="../views/frmRegistroElementos.php";
 	</script>
 	<?php
 	}

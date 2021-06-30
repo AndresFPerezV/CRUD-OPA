@@ -1,8 +1,8 @@
 
 
 <?php
-	//crear ctrProveedor.php en la carpeta controller
-	//echo "Este es el controlador de proveedor";
+	
+	//echo "Este es el controlador de elementos";
 	require('../modelo/elementos.php');
 	
 	$CodigoE = isset($_POST['CodigoE']) ? $_POST['CodigoE']: NULL;

@@ -15,7 +15,7 @@
 	<div class="form-group col-md-6">
 		
 		<form autocomplete="off" method="post" action="../controller/ctrElemento.php">
-			<h3>Registrar los Elementos</h3>
+			<h3>INGRESE LOS ELEMENTOS</h3>
 			
 			<div class="form-group">
 				<input name="CodigoE" type="text" class="form-control" placeholder="Codigo del elemento" value=""/>

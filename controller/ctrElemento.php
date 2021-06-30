@@ -3,7 +3,7 @@
 <?php
 	
 	//echo "Este es el controlador de elementos";
-	require('../modelo/elementos.php');
+	require('../modelo/elemento.php');
 	
 	$CodigoE = isset($_POST['CodigoE']) ? $_POST['CodigoE']: NULL;
 	$nombre = isset($_POST['nombre']) ? $_POST['nombre']: NULL;

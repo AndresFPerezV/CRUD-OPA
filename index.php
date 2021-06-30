@@ -51,38 +51,28 @@ crossorigin="anonymous"></script>
   <div class="collapse navbar-collapse" id="main_nav">
 	<ul class="navbar-nav">
 		<li class="nav-item dropdown">
-			<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Registro de información  </a>
+			<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  OPCIONES  </a>
 		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="views/frmRegistroProveedores.php">Proveedores</a></li>
+			  <li><a class="dropdown-item" href="views/frmRegistroElementos.php">Registrar Elementos</a></li>
 			  <li><a class="dropdown-item" href="#"> Opción2 </a></li>
 			  <li><a class="dropdown-item" href="#"> Opción3 </a></li>
 		    </ul>
 		</li>
 		
 		<li class="nav-item dropdown">
-			<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Consultas  </a>
+			<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  CONSULTAS  </a>
 		    <ul class="dropdown-menu">
-			  <li><a class="dropdown-item" href="controller/ctrConsultasProveedor.php?consulta1=listado1">Listar proveedores</a></li>
+			  <li><a class="dropdown-item" href="controller/ctrConsultasProveedor.php?consulta1=listado1">Listado de Elementos</a></li>
 			  <li><a class="dropdown-item" href="#"> Opción2 </a></li>
 			  <li><a class="dropdown-item" href="#"> Opción3 </a></li>
 		    </ul>
 		</li>
 				
 		
-		<li class="nav-item active"><a class="nav-link" href="#"> Contacto </a></li>
+		
 		
 	</ul>
-	<ul class="navbar-nav ml-auto">
-		<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-		<li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
-		<li class="nav-item dropdown">
-			<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown right </a>
-		    <ul class="dropdown-menu dropdown-menu-right">
-			  <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-			  <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
-		    </ul>
-		</li>
-	</ul>
+	
   </div> <!-- navbar-collapse.// -->
 </nav>
 

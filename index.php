@@ -54,7 +54,7 @@ crossorigin="anonymous"></script>
 			<a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  OPCIONES  </a>
 		    <ul class="dropdown-menu">
 			  <li><a class="dropdown-item" href="views/frmRegistroElementos.php">Registrar Elementos</a></li>
-			  <li><a class="dropdown-item" href="#"> Opción2 </a></li>
+			  <li><a class="dropdown-item" href="views/CalcularElementos.php"> Calcular cantidad de Elementos </a></li>
 			  <li><a class="dropdown-item" href="#"> Opción3 </a></li>
 		    </ul>
 		</li>

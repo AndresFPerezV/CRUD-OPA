@@ -1,6 +1,6 @@
 
 <?php
-	//cear en en la carpeta modelo el archivo proveedor.php
+	
 	require('../db/Conectar.php');
 	
 	class Elemento{
@@ -94,6 +94,8 @@
 			die($e->getMessage());
 			}
 		}
+
+		
 
 		public function listarElementos(){
 			$sql="select * from elemento";

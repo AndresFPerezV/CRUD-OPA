@@ -36,7 +36,7 @@
 var pesoMaximo=<?php echo json_encode($pesomax);?>;;
 var pesos=<?php echo json_encode($peso);?>;
 var valores=<?php echo json_encode($calorias);?>;
-
+//
 //document.write(valores+"<br>");
 //document.write(pesos+"<br>");
 function llenarMochila(pesoMaximo, pesos, valores){

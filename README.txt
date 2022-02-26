@@ -1,6 +1,3 @@
-PRUEBA TÉCNICA DESARROLLADORES 1
-
-Se realizo el desarrollo de la prueba #1 donde se tenía que realizar un desarrollo que me diera como resultado la cantidad maxima de elementos que podián llevar los excursionistas en sus mochilas.
 
 Comenzando...
 
